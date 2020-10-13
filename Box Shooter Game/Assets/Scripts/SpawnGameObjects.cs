@@ -47,8 +47,8 @@ public class SpawnGameObjects : MonoBehaviour
 
 		// get a random position between the specified ranges
 		spawnPosition.x = Random.Range (xMinRange, xMaxRange);
-		spawnPosition.y = Random.Range (yMinRange, yMaxRange);
-		spawnPosition.z = Random.Range (zMinRange, zMaxRange);
+		spawnPosition.y = Random.Range(yMinRange, yMaxRange);
+		spawnPosition.z = Random.Range(zMinRange, zMaxRange);
 
 		// determine which object to spawn
 		int objectToSpawn = Random.Range (0, spawnObjects.Length);
