@@ -6,6 +6,8 @@ public class Move : MonoBehaviour {
 
 	public float speed = 10f;
 	Rigidbody r;
+	public bool onGround = true;
+
 	private void Start()
     {
 		r = GetComponent<Rigidbody>();
@@ -18,9 +20,9 @@ public class Move : MonoBehaviour {
 		r.transform.Translate(x, 0, z);
 
         //jump cube
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && onGround)
         {
-
+			r.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
         }
 	}
 }
